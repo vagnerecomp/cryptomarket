@@ -1,0 +1,2 @@
+"use strict";(self["webpackChunkcryptomarket"]=self["webpackChunkcryptomarket"]||[]).push([[443],{381:function(t,n,r){r.r(n),r.d(n,{default:function(){return k}});var a=r(252);const e={class:"about"},u=(0,a._)("h1",null,"This is an about page",-1),c=[u];function s(t,n){return(0,a.wg)(),(0,a.iD)("div",e,c)}var o=r(744);const i={},f=(0,o.Z)(i,[["render",s]]);var k=f}}]);
+//# sourceMappingURL=about.0a4548b2.js.map
