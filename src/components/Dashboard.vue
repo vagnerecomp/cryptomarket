@@ -42,7 +42,9 @@ export default {
         }
     },
     mounted(){
-        this.getCoinsData();
+        setInterval(() => {
+            this.getCoinsData();
+        }, 1200)
     }
 }
 </script>
