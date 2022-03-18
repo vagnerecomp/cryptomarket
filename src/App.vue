@@ -32,5 +32,10 @@ import Marquee from "./components/Marquee.vue";
   flex-direction: column;
   align-items: center;
 }
+@media (max-width: 956px){
+  .table-coins-container{
+    padding: 50px 0 50px 0;
+  }
+}
 
 </style>

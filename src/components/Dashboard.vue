@@ -120,6 +120,11 @@ export default {
     #coin-marketcap, #coin-marketcap-heading {
       display: none;
     }
+    .table-row, .table-row-heading {
+    /* background-color: rgb(24 255 255); */
+        width: 98%;
+
+    }
     .table-row div, .table-row-heading div{
         width: 33%;
         justify-content: space-around;
