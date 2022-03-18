@@ -58,6 +58,7 @@ export default {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+    border-bottom: 1px solid #dcdcdc;
 
 }
 .table-row div, .table-row-heading div{
@@ -127,7 +128,7 @@ export default {
     font-weight: 100;
    /* margin-left: 30px; */
         padding-left: 25px;
-        
+
    
     }
 }
