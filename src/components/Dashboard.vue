@@ -3,15 +3,15 @@
         <div>Name</div>
         <div>Price</div>
         <div>1h %</div>
-        <div>Market Cap</div>
-        <div>Volume</div>
+        <div id="coin-marketcap-heading">Market Cap</div>
+        <div id="coin-volume-heading">Volume</div>
     </div>
 
     <div class="table-row" v-for="coinData in coinsData" :key="coinData.id">
         <div class="coin-presentation-field">
             <img :src="coinData.image" alt="Coin image" id="coin-image">
-            <div id="coin-name"><p>{{coinData.name }}</p></div>
-            <div> <p id="coin-symbol">{{coinData.symbol}}</p> </div>
+            <div id="coin-name">{{coinData.name }}</div>
+            <div id="coin-symbol">{{coinData.symbol}}</div>
         </div>
         <div id="coin-price"> ${{coinData.current_price}} </div>
         <div
@@ -20,8 +20,8 @@
         <div v-else style="color: #ef4444;" class="coin-change">
             {{coinData.price_change_percentage_24h}}% 
         </div>
-        <div> ${{coinData.market_cap}} </div>
-        <div> {{coinData.total_volume}} </div>
+        <div id="coin-marketcap"> ${{coinData.market_cap}} </div>
+        <div id="coin-volume"> {{coinData.total_volume}} </div>
     </div>
 </template>
 
@@ -75,7 +75,11 @@ export default {
 }
 .coin-presentation-field{
     display: flex;
-    justify-content: space-around;
+    /* flex-wrap: nowrap; */
+    justify-content: space-between;
+    padding-right: 30px;
+    align-items: center;
+    /* position: relative; */
 }
 .coin-presentation-field div{
     margin-left: 8px;
@@ -83,11 +87,48 @@ export default {
 #coin-image{
     width: 20px;
     height:20px;
+    /* position: absolute; */
+    /* left: 8px; */
 }
+
 #coin-name, #coin-price, .coin-change{
     font-weight: bold;
 }
+#coin-name {
+    height: 20px;
+    font-size: small;
+}
 #coin-symbol{
     font-weight: 100;
+   /* margin-left: 30px; */
+   padding-left: 18px;
+   
+}
+
+@media (max-width: 1162px)
+{
+    #coin-volume, #coin-volume-heading{
+      display: none;
+    }
+    .table-row div, .table-row-heading div{
+        width: 25%;
+    }
+}
+@media (max-width: 956px)
+{
+    #coin-marketcap, #coin-marketcap-heading {
+      display: none;
+    }
+    .table-row div, .table-row-heading div{
+        width: 33%;
+        justify-content: space-around;
+    }
+    #coin-symbol{
+    font-weight: 100;
+   /* margin-left: 30px; */
+        padding-left: 25px;
+        
+   
+    }
 }
 </style>
